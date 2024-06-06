@@ -1,0 +1,52 @@
+const produtos = [
+    {
+        nome: 'geladeira eletrolux',
+        preco: 1990.90,
+        categoria: 'eletrodomestico'
+    },
+    {
+        nome: 'TV 4K LG',
+        preco: 3400.90,
+        categoria: 'eletrodomestico'
+    },
+    {
+        nome: 'Sofá cama',
+        preco: 2000.99,
+        categoria: 'moveis'
+    },
+    {
+        nome: 'Mesa de jantar',
+        preco: 1500.00,
+        categoria: 'moveis'
+    },
+    {
+        nome: 'Micro-ondas Panasonic',
+        preco: 500.00,
+        categoria: 'eletrodomestico'
+    },
+    {
+        nome: 'Notebook Dell',
+        preco: 3500.00,
+        categoria: 'eletronico'
+    },
+    {
+        nome: 'Smartphone Samsung Galaxy',
+        preco: 2000.00,
+        categoria: 'eletronico'
+    },
+    {
+        nome: 'Forno elétrico',
+        preco: 800.00,
+        categoria: 'eletrodomestico'
+    },
+    {
+        nome: 'Cadeira de escritório',
+        preco: 400.00,
+        categoria: 'moveis'
+    },
+    {
+        nome: 'Liquidificador Philips',
+        preco: 150.00,
+        categoria: 'eletrodomestico'
+    },
+];

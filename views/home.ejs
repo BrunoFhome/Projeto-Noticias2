@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<%-include ('partials/header.ejs') %>
+<h3 style="font-size: 14px;">Usúario: <%= user.email %></h3>
+<div class="container">
+    <form action="/" method="GET" class="search-form">
+        <select name="categoria" class="category-select">
+            <option value="0">Escolha a categoria</option>
+            <option value="natureza">Natureza</option>
+            <option value="futebol">Futebol</option>
+            <option value="dolar">Dolar</option>
+        </select>
+        <button type="submit" class="button">Filtrar</button>
+    </form>
+</div>
+
+<section class="noticia-destaque">
+    <div class="center">
+        <div class="img-destaque">
+            <div class="overlay-destaque"></div>
+            <div class="title-destaque-descricao">
+                <h2>SpaceX faz 1º voo bem-sucedido com a Starship</h2>
+                <p>Esta foi a quarta tentativa da empresa do bilionário Elon Musk de completar uma missão com a nave. Ela será usada em futuras missões da Nasa à Lua e em voos de turismo espacial.</p>
+            </div>
+            <img src="images/foguete.jpg" />
+        </div>
+    </div>
+</section>
+
+<section class="outras-noticias">
+    <div class="title-outras-noticia">
+        <h2>Últimas Noticías</h2>
+        <br><br>
+        <div class="center">
+            <div class="ultimas">
+                <div class="box-ultima-single">
+                    <img src="images/IMAGEM2.png"/>
+                    <div class="conteudo-noticia-single">
+                    <h3>Natureza e Geral</h3>
+                    <h2>Como Encarar o Surf em Floripa</h2>
+                    <p>Praia do Francês será palco de competição internacional de surf</p>
+                    <a href="/saiba-mais">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="box-ultima-single">
+                    <img src="images/arroz.png"/>
+                    <div class="conteudo-noticia-single">
+                    <h3>Govêrno Brasileiro</h3>
+                    <h2>Governo compra 263 mil toneladas de arroz</h2>
+                    <p>Mais cedo, tribunal derrubou liminar e liberou realização do leilão.</p>
+                    <a href="/saiba-mais">Saiba mais</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mais-lidas">
+                <h3>Mais lidas</h3>
+                <div class="mais-lidas-noticias">
+                    <div class="mais-lida-noticia-single">
+                        <img src="images/MUNDOANIMAL.png" alt="">
+                        <div class="texto-mais-lida-single">
+                            <h4>Natureza</h4>
+                            <p>Extinção de leão africano causa preocupações</p>
+                            <a href="/saiba-mais">Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="mais-lida-noticia-single">
+                        <img src="images/vinicius.jpeg" alt="">
+                        <div class="texto-mais-lida-single">
+                            <h4>Futebol</h4>
+                            <p>Vini Jr campeão da Champions e favorito a Bola de Ouro</p>
+                            <a href="/saiba-mais">Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="mais-lida-noticia-single">
+                        <img src="images/dolar.jpg" alt="">
+                        <div class="texto-mais-lida-single">
+                            <h4>Dólar</h4>
+                            <p>Alta no dólar preocupa comerciantes</p>
+                            <a href="/saiba-mais">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<%-include ('partials/footer.ejs') %>
+
+</html>
