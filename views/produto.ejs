@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/public/estilo.css">
 
-    <title>Categorias</title>
+    <title><%= produto.nome %> - Detalhes</title>
 
 </head>
 <body>
     <div class="container">
-        <h1 class="category">Categoria: <%= produto.categoria %></h1>
+        <h1><%= produto.nome %></h1>
+        <p class="price">Preço: R$ <%= produto.preco.toFixed(2) %></p>
+        <p class="category">Categoria: <%= produto.categoria %></p>
         <!-- Adicione mais detalhes ou informações sobre o produto aqui -->
-        <a href="/" class="a">Voltar à lista de noticias</a>
+        <a href="/" class="a">Voltar à lista de produtos</a>
     </div>
 </body>
 </html>

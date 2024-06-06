@@ -29,16 +29,16 @@ var firebaseConfig = {
   appId: "1:396677193319:web:888d3f39717920d82c3ec2"
 };
 
-const noticias = [
+const produtos = [
     {
-        categoria: 'natureza'
+        categoria: 'eletrodomestico'
+    },
+    {       
+        categoria: 'eletrodomestico'
     },
     {
-        categoria: 'futebol'
+        categoria: 'moveis'
     },
-    {
-        categoria: 'dolar'
-    }
 ];
 
 const firebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
@@ -81,14 +81,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Rota principal
 app.get('/', (req, res) => {
     const categoriaSelecionada = req.query.categoria; // Obtenha a categoria selecionada do query string
-    let noticiasFiltrados = noticias;
+    let produtosFiltrados = produtos;
 
     if (categoriaSelecionada && categoriaSelecionada !== '0') {
-        // Filtrar noticias pela categoria selecionada
-        noticias = noticias.filter(produto => produto.categoria === categoriaSelecionada);
+        // Filtrar produtos pela categoria selecionada
+        produtosFiltrados = produtos.filter(produto => produto.categoria === categoriaSelecionada);
     }
 
-    res.render('index', { noticias: noticias });
+    res.render('index', { produtos: produtosFiltrados });
 });
 
 // Rota para adicionar produto
@@ -102,12 +102,6 @@ app.post('/add', (req, res) => {
     res.redirect('/');
 });
 
-// Rota para visualizar noticia
-app.get('/noticia/:categoria', (req, res) => {
-    const nome = req.params.nome;
-    const produto = noticias.find(produto => produto.nome === nome);
-    res.render('produto', { produto });
-});
 
 // Iniciar servidor
 app.listen(port, () => {
